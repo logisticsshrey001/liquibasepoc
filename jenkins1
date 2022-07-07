@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    docker { image 'liquibase/liquibase:4.12.0' }
-  }
+agent any
   stages {
     stage('Test') {
       steps {
