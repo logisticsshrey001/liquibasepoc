@@ -1,0 +1,25 @@
+pipeline {
+  agent {
+    docker { image 'liquibase/liquibase:4.12.0' }
+  }
+  environment {
+    POSTGESQL_CREDS=credentials('postgresql-credentials')
+  }
+  stages {
+    stage('Status') {
+      steps {
+        sh 'liquibase status --url="jdbc:postgresql://localhost:5432/testing" --changeLogFile=my_app-wrapper.xml --username=$dev_test --password=$shrey'
+      }
+    }
+    stage('Update') {
+      steps {
+        sh 'liquibase update --url="jdbc:postgresql://localhost:5432/testing" --changeLogFile=my_app-wrapper.xml --username=$dev_test --password=$shrey'
+      }
+    }
+  }
+  post {
+    always {
+      cleanWs()
+    }
+  }
+}
