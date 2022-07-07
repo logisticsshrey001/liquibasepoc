@@ -3,8 +3,7 @@ pipeline {
     docker { image 'liquibase/liquibase:4.12.0' }
   }
   environment {
-    POSTGESQL_CREDS_USR=credentials('dev_test')
-    POSTGESQL_CREDS_PSWD=credentials('shrey')
+    POSTGESQL_CREDS=credentials('a68c8ecc-5c61-467f-acb6-f3148fe941c7')
   }
   stages {
     stage('Status') {
