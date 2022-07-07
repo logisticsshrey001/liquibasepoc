@@ -1,0 +1,4 @@
+ changelog-file: \Users\shrey.s\Downloads\demo\changelog.xml
+ url: jdbc:postgresql://mydatabaseinstance.c5te0aokpcrs.us-west-2.rds.amazonaws.com:5432/testdatabases1
+ username: shrey
+ password: shrey123
