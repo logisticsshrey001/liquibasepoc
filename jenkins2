@@ -8,12 +8,12 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'liquibase status --url="jdbc:postgresql://127.0.0.1:5432/testing" --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
+        sh 'liquibase status --url="jdbc:postgresql://103.219.228.80:5432/testing" --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
       }
     }
     stage('Update') {
       steps {
-        sh 'liquibase update --url="jdbc:postgresql://127.0.0.1:5432/testing" --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
+        sh 'liquibase update --url="jdbc:postgresql://103.219.228.80:5432/testing" --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
       }
     }
   }
