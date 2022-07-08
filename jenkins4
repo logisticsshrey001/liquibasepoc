@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'liquibase/liquibase:4.12.0' }
+    docker { image 'liquibase/liquibase:4.4.2' }
   }
   environment {
     POSTGESQL_CREDS=credentials('58a866b6-2b26-4dcd-97d2-a5588da24b79')
