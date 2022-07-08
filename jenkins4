@@ -1,0 +1,25 @@
+pipeline {
+  agent {
+    docker { image 'liquibase/liquibase:4.12.0' }
+  }
+  environment {
+    POSTGESQL_CREDS=credentials('rds')
+  }
+  stages {
+    stage('Status') {
+      steps {
+        sh 'liquibase status --url="jdbc:mysql://testdatabase.c5te0aokpcrs.us-west-2.rds.amazonaws.com:3306/pocdatabase" --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
+      }
+    }
+    stage('Update') {
+      steps {
+        sh 'liquibase update --url="jdbc:mysql://testdatabase.c5te0aokpcrs.us-west-2.rds.amazonaws.com:3306/pocdatabase" --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
+      }
+    }
+  }
+  post {
+    always {
+      cleanWs()
+    }
+  }
+}
