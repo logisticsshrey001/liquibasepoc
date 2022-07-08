@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'liquibase status --url="jdbc:postgresql://mydatabaseinstance.c5te0aokpcrs.us-west-2.rds.amazonaws.com:5432/testdatabases1" currentSchema=testdatabases1 --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
+        sh 'liquibase status --url="jdbc:postgresql://mydatabaseinstance.c5te0aokpcrs.us-west-2.rds.amazonaws.com:5432/testdatabases1"  --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
       }
     }
     
