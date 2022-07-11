@@ -37,7 +37,7 @@
 	<tagDatabase tag="version2"/>
 </changeSet>
 	<changeSet id="1" author="Liquibase4">
-    <createTable tableName="test_table">
+    <createTable tableName="demorll">
            <column name="test_id" type="int">
                  <constraints primaryKey="true"/>
            </column>
