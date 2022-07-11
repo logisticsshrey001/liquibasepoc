@@ -8,7 +8,7 @@ pipeline {
   stages {
       stage('rollback') {
       steps {
-        sh 'liquibase rollback version1 --url="jdbc:postgresql://172.17.0.1:5432/testing" --changeLogFile=rollback.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
+        sh 'liquibase rollback version2 --url="jdbc:postgresql://172.17.0.1:5432/testing" --changeLogFile=rollback.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
       }
     }
   }
