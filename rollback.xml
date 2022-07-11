@@ -21,7 +21,7 @@
     </createTable>
 </changeSet>
 	 <changeSet author="liquibase2" id="tagDatabase-example">
-	<tagDatabase tag="version2"/>
+	<tagDatabase tag="version1.0"/>
 </changeSet>
 	<changeSet id="1" author="Liquibase2">
     <createTable tableName="test_table2">
