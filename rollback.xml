@@ -20,8 +20,6 @@
         <column name="author" type="varchar(36)"/>
     </createTable>
 </changeSet>
-
- </changeSet>
 	 <changeSet author="liquibase2" id="tagDatabase-example">
 	<tagDatabase tag="version2"/>
 </changeSet>
