@@ -19,8 +19,5 @@
         <column name="heading" type="varchar(36)"/>
         <column name="author" type="varchar(36)"/>
     </createTable>
-    <rollback>
-        <dropTable tableName="baeldung_test"/>
-    </rollback>
 </changeSet>
 </databaseChangeLog>
