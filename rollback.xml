@@ -10,8 +10,10 @@
                         http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd 
                         http://www.liquibase.org/xml/ns/dbchangelog 
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="baeldung" id="tagDatabase-example">
+	<tagDatabase tag="version1"/>
+</changeSet>
     <changeSet id="testRollback" author="baeldung">
-    <tagDatabase tag="version_1"/>
     <createTable tableName="baeldung_turorial">
         <column name="id" type="int"/>
         <column name="heading" type="varchar(36)"/>
