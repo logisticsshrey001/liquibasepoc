@@ -20,4 +20,16 @@
         <column name="author" type="varchar(36)"/>
     </createTable>
 </changeSet>
+
+ </changeSet>
+	 <changeSet author="liquibase2" id="tagDatabase-example">
+	<tagDatabase tag="version2"/>
+</changeSet>
+	<changeSet id="1" author="Liquibase2">
+    <createTable tableName="test_table2">
+           <column name="test_id" type="int">
+                 <constraints primaryKey="true"/>
+           </column>
+           <column name="test_column" type="varchar"/>
+    </createTable
 </databaseChangeLog>
