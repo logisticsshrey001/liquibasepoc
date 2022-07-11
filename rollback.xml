@@ -20,7 +20,7 @@
         <column name="author" type="varchar(36)"/>
     </createTable>
 </changeSet>
-	 <changeSet author="liquibase2" id="tagDatabase-example">
+	 <changeSet author="Liquibase2" id="tagDatabase-example">
 	<tagDatabase tag="version1.0"/>
 </changeSet>
 	<changeSet id="1" author="Liquibase2">
