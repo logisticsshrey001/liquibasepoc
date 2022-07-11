@@ -25,9 +25,6 @@
            <column name="test_column" type="varchar"/>
     </createTable>
     </changeSet>
-	 <changeSet author="liquibase2" id="tagDatabase-example">
-	<tagDatabase tag="version2"/>
-</changeSet>
 	<changeSet id="1" author="Liquibase2">
     <createTable tableName="test_table2">
            <column name="test_id" type="int">
@@ -36,6 +33,18 @@
            <column name="test_column" type="varchar"/>
     </createTable>
     </changeSet>
+       <changeSet author="liquibase4" id="tagDatabase-example">
+	<tagDatabase tag="version2"/>
+</changeSet>
+	<changeSet id="1" author="Liquibase4">
+    <createTable tableName="test_table">
+           <column name="test_id" type="int">
+                 <constraints primaryKey="true"/>
+           </column>
+           <column name="test_column" type="varchar"/>
+    </createTable>
+    </changeSet>
+	
 	
 </databaseChangeLog>
 
