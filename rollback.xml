@@ -29,5 +29,6 @@
                  <constraints primaryKey="true"/>
            </column>
            <column name="test_column" type="varchar"/>
-    </createTable
+    </createTable>
+    </changeSet>
 </databaseChangeLog>
