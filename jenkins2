@@ -16,11 +16,6 @@ pipeline {
         sh 'liquibase update --url="jdbc:postgresql://172.17.0.1:5432/testing" --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
       }
     }
-    stage('rollback') {
-      steps {
-        sh 'liquibase rollback --url="jdbc:postgresql://172.17.0.1:5432/testing" --changeLogFile=my_app-wrapper.xml --username=$POSTGESQL_CREDS_USR --password=$POSTGESQL_CREDS_PSWD'
-      }
-    }
   }
   post {
     always {
